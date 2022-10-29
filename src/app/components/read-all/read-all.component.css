@@ -1,0 +1,36 @@
+.card{
+    background-color: rgb(244, 248, 232);    
+}
+.container{
+    width: 90%;
+    height: 2rem;
+}
+.conteudo{
+    width: 100%;      
+}
+.novo{
+    width: 100%;
+    margin-top: 1rem;
+    align-items: center;
+}
+.acoes {
+    text-align: end;
+}
+mat-card, mat-card-subtitle{
+    color: blue;
+}
+mat-card{
+    margin-top: .8rem;
+}
+.badge{
+    margin-top: .2rem;
+    margin-bottom: 0.1px;
+    display: flex;
+    justify-content: end;
+}
+mat-radio-group{
+    color: aquamarine;
+}
+.botoes{
+    margin-left: 5px;
+}

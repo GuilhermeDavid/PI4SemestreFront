@@ -1,0 +1,33 @@
+<body>
+    <form>
+        <h1>Cadastro de Alunos</h1>
+        <mat-form-field id="camposTexto">
+            <label>Nome</label>
+            <input mat-input placeholder="Ex. Marcos Monteiro">
+        </mat-form-field>
+
+        <div class="cadastro">
+            <mat-form-field appearance="fill">
+                <label>Situação do Aluno</label>
+                <select>
+                  <option value="ativo">Ativo</option>
+                  <option value="inativo">Inativo</option>
+                </select>
+            </mat-form-field>
+
+            <mat-form-field class="dataCadastro" appearance="fill">
+                    <label>Data de Cadastro</label>
+                    <input matInput [matDatepicker]="dp3" disabled>
+                    <mat-hint>MM/DD/YYYY</mat-hint>
+                    <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+                    <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+            </mat-form-field>
+
+
+            <div class="botoes">
+                <button mat-raised-button color="primary">Gravar</button>
+                <button mat-raised-button color="warn">Cancelar</button>
+            </div>
+        </div>
+    </form>
+</body>
