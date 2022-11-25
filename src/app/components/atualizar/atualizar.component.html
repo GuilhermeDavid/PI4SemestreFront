@@ -1,1 +1,47 @@
-<p>atualizar works!</p>
+<form>
+  <h1>Alteração dos dados do Aluno</h1>
+  <div class="dados">
+    <mat-form-field id="camposTexto"
+      ><mat-label>Nome</mat-label>
+      <input
+        [(ngModel)]="aluno.nome"
+        name="aluno.nome"
+        mat-input
+        placeholder="Ex. Marcos Monteiro"
+      />
+    </mat-form-field>
+    <mat-form-field class="status">
+      <label>Situação do Aluno</label>
+      <select>
+        <option [(ngModel)]="aluno.ativo" name="aluno.ativo" value="true">
+          Ativo
+        </option>
+        <option [(ngModel)]="aluno.ativo" name="aluno.ativo" value="false">
+          Inativo
+        </option>
+      </select>
+    </mat-form-field>
+    <mat-form-field class="dataCadastro" appearance="fill">
+      <label>Data de Cadastro</label>
+      <input
+        [(ngModel)]="aluno.dataCadastro"
+        name="aluno.dataCadastro"
+        matInput
+        [matDatepicker]="dp3"
+        disabled
+      />
+      <mat-hint>dd/MM/yyyy</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+      <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+  <div class="botoes">
+    <button (click)="atualizar()" 
+    mat-raised-button color="primary"> Atualizar
+    </button>
+    <button (click)="cancelar()" mat-raised-button color="warn">
+      Cancelar
+    </button>
+  </div>
+</form>

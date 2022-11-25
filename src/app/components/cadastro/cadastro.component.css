@@ -1,18 +1,27 @@
 body{
    background-color: rgb(207, 237, 209);    
 }
+
 form{
     width: 90%;    
     margin-left: 50px;
 }
 #camposTexto{
-    width: 100%;
+    width: 95%;
     color: blue;
 }
 
 .dataCadastro{    
-    border: 1px solid rgb(3, 24, 63);
+   color: rgb(5, 8, 95);
+   font-size: 18px;
+   font-weight: 400;
 }
+
+.status{    
+    color: rgb(5, 8, 95);
+    font-size: 18px;
+    font-weight: 400;
+ }
 
 h1{
     font-size: 24px;

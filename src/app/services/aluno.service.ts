@@ -20,6 +20,13 @@ export class AlunoService {
        duration: 5000
    })}
    
+   /*O método pesquisarRA irá fazer a requisição 
+  * para o back passando um ra com a url e aguardará 
+   um aluno como resposta do get.*/
+   pesquisarRA(ra: any): Observable<Aluno> {
+    const url = `${this.baseUrl}/${ra}`
+    return this.http.get<Aluno>(url);
+  }
 
   /*O método findAll irá fazer a requisição 
   * para o back e aguardará a resposta.*/
@@ -44,5 +51,9 @@ export class AlunoService {
   atualizar(aluno: Aluno): Observable<Aluno> {
     const url = `${this.baseUrl}/${aluno.ra}`
     return this.http.put<Aluno>(url, aluno);
+  }
+
+  cadastrar(aluno: Aluno): Observable<Aluno> {
+    return this.http.post<Aluno>(this.baseUrl, aluno);
   }
 }

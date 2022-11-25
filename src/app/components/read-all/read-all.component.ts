@@ -31,19 +31,17 @@ export class ReadAllComponent implements OnInit {
       
     });  }
     
-    apagar(id: any): void{
-      this.service.apagar(id).subscribe((resposta)=>{
-        if(resposta===null){
-          if(resposta===null){
-            this.service.message('Registro excluído com sucesso'); 
-            this.list = this.list.filter(aluno => aluno.ra  != id);             
-          }            
-          else{
-              this.service.message('Não foi possível excluir o Registro');             
-          }
-        }
-      })
-    }
+apagar(id: any): void{
+  this.service.apagar(id).subscribe((resposta)=>{
+    if(resposta===null){
+        this.service.message('Registro excluído com sucesso'); 
+        this.list = this.list.filter(aluno => aluno.ra  != id);             
+      }            
+      else{
+          this.service.message('Não foi possível excluir o Registro');             
+      }        
+  })
+}
     verInativos(): void {
       this.router.navigate(['inativos']);
     }

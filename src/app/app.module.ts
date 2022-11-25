@@ -12,15 +12,15 @@ import { MatCardModule } from "@angular/material/card";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 import { HttpClientModule } from "@angular/common/http";
-import {MatBadgeModule} from '@angular/material/badge';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { InativosComponent } from './components/inativos/inativos.component';
-import { CadastroComponent } from './components/cadastro/cadastro.component';
-import {MatInputModule} from '@angular/material/input';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatNativeDateModule} from '@angular/material/core';
-import { AtualizarComponent } from './components/atualizar/atualizar.component';
-import {MatSelectModule} from '@angular/material/select';
+import { MatBadgeModule } from "@angular/material/badge";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
+import { InativosComponent } from "./components/inativos/inativos.component";
+import { CadastroComponent } from "./components/cadastro/cadastro.component";
+import { MatInputModule } from "@angular/material/input";
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { MatNativeDateModule } from "@angular/material/core";
+import { AtualizarComponent } from "./components/atualizar/atualizar.component";
+import { MatSelectModule } from "@angular/material/select";
 
 @NgModule({
   declarations: [
@@ -42,14 +42,17 @@ import {MatSelectModule} from '@angular/material/select';
     MatButtonModule,
     MatIconModule,
     HttpClientModule,
-    MatBadgeModule,   
+    MatBadgeModule,
     MatInputModule,
     MatDatepickerModule,
     MatNativeDateModule,
     FormsModule,
     MatSelectModule,
   ],
-  providers: [],
+  providers: [  
+    MatDatepickerModule,
+    MatNativeDateModule  
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

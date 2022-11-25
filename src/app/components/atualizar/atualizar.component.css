@@ -1,0 +1,42 @@
+body{
+    background-color: rgb(207, 237, 209);    
+ }
+ 
+ form{
+     width: 90%;    
+     margin-left: 50px;
+ }
+ #camposTexto{
+     width: 95%;
+     color: blue;
+ }
+ 
+ .dataCadastro{    
+    color: rgb(5, 8, 95);
+    font-size: 18px;
+    font-weight: 400;
+ }
+ 
+ .status{    
+     color: rgb(5, 8, 95);
+     font-size: 18px;
+     font-weight: 400;
+  }
+ 
+ h1{
+     font-size: 24px;
+     color: blue;
+     text-align: center;
+     font-weight: 600;
+ }
+ 
+ .botoes{
+     align-items: flex-start;
+     text-align: right;
+     padding-right: 0.5rem;
+ }
+ 
+ button{
+     margin-left: 10px;
+ }
+ 

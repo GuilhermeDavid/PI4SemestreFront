@@ -14,4 +14,6 @@ span{
 h2{    
     font-size: 1.7rem;
     padding-left: 20px;
+    display: flex;
+    align-content: center;
 }

@@ -1,33 +1,88 @@
-<body>
-    <form>
-        <h1>Cadastro de Alunos</h1>
-        <mat-form-field id="camposTexto">
-            <label>Nome</label>
-            <input mat-input placeholder="Ex. Marcos Monteiro">
-        </mat-form-field>
+<form>
+  <h1>Cadastro de Alunos</h1>
+  <div class="dados">
+    <label>Nome</label>
+    <input
+      type="text"
+      size="60"
+      [(ngModel)]="aluno.nome"
+      name="aluno.nome"
+      placeholder="Ex. Marcos Monteiro"
+    /><br/>
 
-        <div class="cadastro">
-            <mat-form-field appearance="fill">
-                <label>Situação do Aluno</label>
-                <select>
-                  <option value="ativo">Ativo</option>
-                  <option value="inativo">Inativo</option>
-                </select>
-            </mat-form-field>
+    <label>Situação do Aluno</label>
+    <select>
+      <option [(ngModel)]="aluno.ativo" name="aluno.ativo" value="true">
+        Ativo
+      </option>
+      <option [(ngModel)]="aluno.ativo" name="aluno.ativo" value="false">
+        Inativo
+      </option>
+    </select><br/>
+    <label>Data de Cadastro</label>
+    <input
+      type="text"
+      size="20"
+      [(ngModel)]="aluno.dataCadastro"
+      name="aluno.dataCadastro"
+      placeholder="Ex. 29/10/2022"
+    />
+  </div>
 
-            <mat-form-field class="dataCadastro" appearance="fill">
-                    <label>Data de Cadastro</label>
-                    <input matInput [matDatepicker]="dp3" disabled>
-                    <mat-hint>MM/DD/YYYY</mat-hint>
-                    <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
-                    <mat-datepicker #dp3 disabled="false"></mat-datepicker>
-            </mat-form-field>
+  <div class="botoes">
+    <button (click)="cadastrar()" mat-raised-button color="primary">
+      Gravar
+    </button>
+    <button (click)="cancelar()" mat-raised-button color="warn">
+      Cancelar
+    </button>
+  </div>
+</form>
 
+<!-- <form>
+  <h1>Cadastro de Alunos</h1>
+  <div class="dados">
+    <mat-form-field id="camposTexto"
+      ><mat-label>Nome</mat-label>
+      <input
+        [(ngModel)]="aluno.nome"
+        name="aluno.nome"
+        mat-input
+        placeholder="Ex. Marcos Monteiro"
+      />
+    </mat-form-field>
+    <mat-form-field class="status">
+      <label>Situação do Aluno</label>
+      <select>
+        <option [(ngModel)]="aluno.ativo" name="aluno.ativo" value="true">
+          Ativo
+        </option>
+        <option [(ngModel)]="aluno.ativo" name="aluno.ativo" value="false">
+          Inativo
+        </option>
+      </select>
+    </mat-form-field>
+    <mat-form-field class="dataCadastro" appearance="fill">
+      <label>Data de Cadastro</label>
+      <input
+        [(ngModel)]="aluno.dataCadastro"
+        name="aluno.dataCadastro"
+        matInput
+        [matDatepicker]="dp3"
+        disabled
+      />
+      <mat-hint>dd/MM/yyyy</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+      <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+    </mat-form-field>
+  </div>
 
-            <div class="botoes">
-                <button mat-raised-button color="primary">Gravar</button>
-                <button mat-raised-button color="warn">Cancelar</button>
-            </div>
-        </div>
-    </form>
-</body>
+  <div class="botoes">
+    <button (click)="cadastrar()" mat-raised-button color="primary">
+      Gravar
+    </button>
+    <button (click)="cancelar()" mat-raised-button color="warn">
+      Cancelar
+    </button>
+  </div>
+</form> -->
